@@ -37,8 +37,8 @@ function appendCat(name) {
     
     cats.length = 0;
     cats.push('Milo', 'Otis', 'Garfield');
-    let newCats = [...cats, name];
-    return newCats;
+   
+    return  [...cats, name];
 
 }
 
@@ -46,26 +46,24 @@ function prependCat(name) {
 
     cats.length = 0;
     cats.push('Milo', 'Otis', 'Garfield');
-    let newCats = [name, ...cats];
-    return newCats;
+     
+    return [name, ...cats];
 }
 
 function removeLastCat() {
 
     cats.length = 0;
     cats.push('Milo', 'Otis', 'Garfield');
-    let newCats = [...cats];
-    newCats.pop();
-    return newCats;
+    
+    return cats.slice(0, cats.length-1);
 }
 
 function removeFirstCat() {
 
     cats.length = 0;
     cats.push('Milo', 'Otis', 'Garfield');
-    let newCats = [...cats];
-    newCats.shift();
-    return newCats;
+    
+    return cats.slice(1);
 }
 
-//console.log(appendCat());
+
